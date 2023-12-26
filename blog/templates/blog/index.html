@@ -1,9 +1,17 @@
-{% extends "base.html" %}
 
+{% extends "base.html" %}
+{% load static %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static "blog/css/style.css" %}">
+{% endblock css_files %}
+{% block title %}HomePage{% endblock title %}
 {% block content %}
-    <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Blogs</a></li>
-    </ul>
-    <h1>HomePage</h1>
+
+    <h1 class="text-black">HomePage</h1>
+
+    <img src="{% static "img/django.webp" %}" width="100px" alt="">
 {% endblock content %}
+
+{% block js_files %}
+<script src="{% static "blog/js/script.js" %}"></script>
+{% endblock js_files %}
