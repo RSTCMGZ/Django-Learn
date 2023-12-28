@@ -14,19 +14,19 @@ data = {
         },
         {
             'id': 2,
-            'title':'Python Kursu',
+            'title':'Node Kursu',
             'image': '2.jpg',
             'is_active': True,
             'is_home': True,
-            'description': 'harika bir kurs',
+            'description': 'Dünyada en çok kullanılan bir dil.',
         },
         {
             'id': 3,
-            'title':'Django geliştirme',
+            'title':'Python Kursu',
             'image': '3.jpg',
             'is_active': False,
             'is_home': True,
-            'description': 'harika bir kurs',
+            'description': 'Kolay öğrenme imkanı sunar.',
         },
     ]
 }
@@ -49,4 +49,11 @@ def blogs(request):
 
 
 def blog_details(request,id):
-     return render(request,"blog/blog-details.html", {'id': id})
+    #  blogs = data["blogs"]
+    #  selectedBlog =None
+    #  for blog in blogs:
+    #      if blog["id"] == id:
+    #          selectedBlog = blog
+     blogs = data["blogs"]
+     selectedBlog = [blog for blog in blogs if blog["id"] == id][0]
+     return render(request,"blog/blog-details.html", {'blog': selectedBlog})
