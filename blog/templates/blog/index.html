@@ -7,7 +7,20 @@
 {% block title %}HomePage{% endblock title %}
 {% block content %}
 
-
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-3">
+          {% include "partials/_categories.html" %}
+        </div>
+        <div class="col-9">
+            <h1>HomePage</h1>
+            <hr>
+            {% for blog in blogs  %}
+              {% include "blog/partials/_blog.html" %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
 {% endblock content %}
 
 {% block js_files %}
