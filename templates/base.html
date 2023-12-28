@@ -10,28 +10,11 @@
     <title> {% block title %}Blogapp{% endblock title %} </title>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
-        <div class="container">
-            <a href="" class="navbar-brand">Blogapp</a>
-            <ul class="navbar-nav me-auto"> 
-                <li class="nav-item">
-                    <a class="nav-link" href="">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">Blogs</a>
-                </li>
-            </ul>
-        </div>
-
-    </nav>
+   {% include "partials/_navbar.html" %}
     <div class="container mt-3">
         <div class="row">
             <div class="col-3">
-                <div class="list-group">
-                    <a class="list-group-item list-group-action" href="#">Programlama</a>
-                    <a class="list-group-item list-group-action" href="#">Web Programlama</a>
-                    <a class="list-group-item list-group-action" href="#">Mobil Uygulama</a>
-                </div>
+              {% include "partials/_categories.html" %}
             </div>
             <div class="col-9">
                 <div class="card mb-3">
@@ -45,6 +28,11 @@
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laborum!</p>
                             </div>
                         </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="card mb-3">
+                        <div class="row">
                         <div class="col-md-3">
                             <img src="{% static "img/2.jpg" %}" class="img-fluid" alt="">
                         </div>
@@ -54,6 +42,10 @@
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laborum!</p>
                             </div>
                         </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="row">
                         <div class="col-md-3">
                             <img src="{% static "img/3.jpg" %}" class="img-fluid" alt="">
                         </div>
@@ -63,6 +55,11 @@
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laborum!</p>
                             </div>
                         </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="row">
                         <div class="col-md-3">
                             <img src="{% static "img/4.jpg" %}" class="img-fluid" alt="">
                         </div>
@@ -72,11 +69,11 @@
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laborum!</p>
                             </div>
                         </div>
+                        </div>
                     </div>
-                </div>
+            </div>
             </div>
         </div>
-    </div>
     {% block content %}
     
     
