@@ -12,7 +12,7 @@
                         {{blog.title}}
                     </a>
                 </h5>
-                <p class="card-text">  {{blog.description}}
+                <p class="card-text">  {{blog.description|striptags | slice:"0:39"}}
                 </p>
             </div>
         </div>
